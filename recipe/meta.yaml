@@ -1,0 +1,36 @@
+{% set name = "edffile" %}
+{% set version = "5.0.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: src
+
+build:
+  number: 1000
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - numpy
+
+test:
+  imports:
+    - EdfFile
+
+about:
+  # Long term goal is to have the src/ folder in this recipe as a stand-alone
+  # project on github. This file is part of another, much larger project. It
+  # is broken out so that users do not have to install a full GUI simply to
+  # get Edf file format I/O.
+  home: https://github.com/vasole/pymca/blob/master/PyMca5/PyMcaIO/EdfFile.py
+  license: MIT
+  license_file: https://raw.githubusercontent.com/vasole/pymca/master/LICENSE.MIT
+  summary: Reader for EDF files part of the PyMCA x-ray fluorescence toolkit
