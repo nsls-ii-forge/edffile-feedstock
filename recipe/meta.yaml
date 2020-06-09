@@ -32,5 +32,5 @@ about:
   # get Edf file format I/O.
   home: https://github.com/vasole/pymca/blob/master/PyMca5/PyMcaIO/EdfFile.py
   license: MIT
-  license_file: https://raw.githubusercontent.com/vasole/pymca/master/LICENSE.MIT
+  license_file: LICENSE.MIT
   summary: Reader for EDF files part of the PyMCA x-ray fluorescence toolkit
